@@ -1,0 +1,94 @@
+
+
+ /* Base styling */
+ body {
+  margin: 20px;
+  padding: 0;
+  background-color: #ffffff; /* Dark background */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: 100vh;
+  font-family: "Courier New", Courier, monospace; /* Monospaced font for coding style */
+}
+
+.editor-popup {
+  background-color: #252526; /* Slightly lighter editor area */
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 2px 6px rgba(0, 0, 0, 0.5); /* Popup shadow effect */
+  width: 600px; /* Smaller width */
+  height: 400px; /* Compact height */
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  overflow: hidden;
+}
+
+/* Header bar to mimic a window title bar */
+.editor-header {
+  background-color: #333333;
+  color: #d4d4d4;
+  padding: 8px 12px;
+  border-radius: 8px 8px 0 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.editor-header .dots {
+  display: flex;
+  gap: 8px;
+}
+
+.editor-header .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.editor-header .dot.red {
+  background-color: #ff5f56;
+}
+
+.editor-header .dot.yellow {
+  background-color: #ffbd2e;
+}
+
+.editor-header .dot.green {
+  background-color: #27c93f;
+}
+
+/* Content area */
+.editor-content {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  flex: 1;
+  border-radius: 0 0 8px 8px;
+  padding: 16px;
+  overflow: auto;
+}
+
+.code-line {
+  display: flex;
+}
+
+.line-number {
+  color: #858585;
+  margin-right: 10px;
+  user-select: none;
+}
+
+.content {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.whitespace {
+  margin-top: auto;
+  background-color: transparent;
+  outline: none;
+  padding-left: 1ch;
+  font-size: 1rem;
+}
